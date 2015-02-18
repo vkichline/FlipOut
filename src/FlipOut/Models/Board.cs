@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace FlipOut.Logic {
+namespace FlipOut.Models {
     public class Board {
         private bool[] _board = new bool[64];
         private Random _rand = new Random(System.DateTime.Now.Millisecond);
