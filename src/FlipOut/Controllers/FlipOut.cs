@@ -10,8 +10,7 @@ namespace FlipOut.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            ViewBag.Board = new Board();
-            return View();
+            return View(new Board());
         }
     }
 }

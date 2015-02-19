@@ -1,12 +1,8 @@
-﻿@using FlipOut.Models
-@{
-    Board b = ViewBag.Board as Board;
-}
+﻿@model FlipOut.Models.Board
 
 @functions {
     public string d(int row, int col) {
-        Board b = ViewBag.Board as Board;
-        return b[row, col] ? "H" : "T";
+        return Model[row, col] ? "H" : "T";
     }
 }
 
@@ -35,10 +31,10 @@
     </table>
 
     <p>
-        Board value: @b.Value
+        Board value: @Model.Value
     </p>
 <pre>
-@b.TryAll()
+@Model.TryAll()
 </pre>
 </body>
 </html>
